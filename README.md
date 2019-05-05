@@ -13,6 +13,21 @@ Supported payment methods:
 * Paypal email
 * Credit card via Paypal using Paypal REST SDK (with snadbox for testing)
 
+
+Dependencies
+------------
+
+external:
+* yamlfield
+* oauthlib (for Paypal)
+* requests_oauthlib (for Paypal)
+* paypalrestsdk
+
+interanal:
+* Institution
+* locations
+
+
 Installing
 ----------
 Assuming that you got virtualenv (python virtual envirement) created and activated.
