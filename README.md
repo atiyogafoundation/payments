@@ -34,7 +34,7 @@ Config
 ------
 At settings.py file must be set:
     
-    'PAYEMNT_HOST = "https://domain.com"'
+    PAYEMNT_HOST = "https://domain.com"
 
 
 Licence
