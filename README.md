@@ -42,7 +42,7 @@ Add to "INSTALLED_APPS" in settings.py file:
 
 Add to 'urlpatterns' (at the end) urls.py file:
     
-    (r'registration', include('payments.urls')),
+    (r'payments', include('payments.urls')),
     
 Create tables etc.:
 
