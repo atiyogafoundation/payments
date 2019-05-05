@@ -1,0 +1,44 @@
+ 
+{% extends "base.html" %}
+{% load i18n %} 
+{% load crispy_forms_tags %}
+
+{% block header %}
+    <!-- <h1 class="blog-title">{{ course.title }}</h1> -->
+    <h2>{% trans "Donation" %}</h2>
+{% endblock header %}
+
+
+{% block content %}
+<article class="post__body post__body--offsets">
+    <section class="section" data-type="text">
+        <div class="section__wrapper">
+            <h1>{% trans 'Donation' %}</h1>
+            <h2>{% trans 'cause' %}: {{ cause }}</h2>
+            <h2>{% trans 'beneficiary' %}: {{ institution }}</h2>
+            <h2>{% trans 'payment via' %}: {{ payment_provider }}</h2>
+            <h2>{% trans 'currency' %}: {{ payment_provider.currency }}</h2>
+
+            <form action="" method="post" id="donation_form">
+                {% crispy donation_form %}
+                <div class="form-group">
+                    <button type="submit" class="button" id="donate_button" value="donate">{% trans "Donate" %}</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+</article>
+
+{% endblock content %} 
+
+{% block js %}
+<script>
+  $(function() {
+    $('#donate_button').click(function(e) {
+        e.preventDefault();
+        $("#donation_form").submit();
+    });
+  });
+</script>
+{% endblock js %}

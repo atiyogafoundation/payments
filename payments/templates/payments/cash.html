@@ -1,0 +1,10 @@
+{% extends "single.html" %}
+{% load i18n %} 
+{% load crispy_forms_tags %}
+
+
+{% block main %}
+    <h1>{% trans 'Cash Payment' %}</h1>
+    <p>{% trans 'Thank You. ' %}</p>
+    <a class='button' href="javascript:history.go(-3)">{% trans 'Go Back' %}</a>
+{% endblock main %} 

@@ -1,0 +1,38 @@
+ 
+{% extends "base.html" %}
+{% load i18n %} 
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<article class="post__body post__body--offsets">
+    <section class="section" data-type="text">
+        <div class="section__wrapper">
+            <h1>{% trans 'Payment' %}</h1>
+            <h2><em>{% trans 'cause' %}</em>: {{ cause }}</h2>
+            <h2><em>{% trans 'beneficiary' %}</em>: {{ institution }}</h2>
+            <h2><em>{% trans "to pay" %}</em>: <strong>{{ payment_data.ammount }}</strong> {{ payment_data.currency }}</h2>
+
+            <form action="" method="post" id="donation_form">
+                {% crispy payment_form %}
+                <div class="form-group pull-right">
+                    <button type="submit" class="button" id="donate_button" value="donate">{% trans "Pay" %}</button>
+                </div>
+            </form>
+
+        </div>
+    </section>
+</article>
+
+{% endblock content %} 
+
+{% block js %}
+<script>
+  $(function() {
+    $('#donate_button').click(function(e) {
+        e.preventDefault();
+        $("#donation_form").submit();
+    });
+  });
+</script>
+{% endblock js %}

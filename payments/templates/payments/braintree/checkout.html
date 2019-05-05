@@ -1,0 +1,34 @@
+{% extends "single.html" %}
+
+{% block main %}
+    <h1></h1>
+    <div>
+        <form id="checkout" method="post" action="/payment">
+            <div id="payment-form">
+                <input type='hidden' id='client_token' value='{{payment.token}}'> 
+                <input type='hidden' name='amount' value='{{payment.amount}}'> 
+                <input type='text' name='amount' value='{{payment.amount}}' readonly>
+            </div>
+            <input class="button" type="submit" value="Donate"> 
+        </form>
+    </div>
+{% endblock %}
+
+
+{% block js %}
+<script src="https://js.braintreegateway.com/v2/braintree.js"></script>
+<script>
+
+var clientToken = document.getElementById('client_token').value;
+// creating payment method nonse
+
+braintree.setup(clientToken, "dropin", {
+    container: "payment-form",
+    paypal: {
+        singleUse: true,
+        amount: {{payment.amount}},
+        currency: 'EUR'
+    }
+});
+</script>
+{% endblock %}

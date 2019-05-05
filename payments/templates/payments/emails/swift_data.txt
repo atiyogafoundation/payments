@@ -1,0 +1,19 @@
+{% load i18n %} 
+{% trans 'Dear' %} {{ payment.billing_first_name }} {{ payment.billing_last_name }}
+
+{% trans 'To conclude the payment please proceed to execute bank transfer with following:' %}
+
+{% trans 'cause:' %} {{ payment.cause.name }}
+{% trans 'beneficiary:' %} {{ payment.to }}
+{% trans 'amount:' %} {{ payment.show_amount }}
+
+{% trans 'account:' %}
+    {% trans 'Bank:' %} {{ settings.bank }}
+    {% trans 'Bank address:' %} {{ settings.address }}
+    {% trans 'Account name:' %} {{ settings.account }}
+    {% trans 'IBAN:' %} {{ settings.IBAN }}
+    {% trans 'BIC:' %} {{ settings.BIC }}
+    {% trans 'SWIFT:' %} {{ settings.SWIFT }}
+
+{% trans 'Please remember to indicate in the transfer comments the payment id:' %} {{ payment.code }}
+{% trans 'Thank You!' %}

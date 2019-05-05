@@ -1,0 +1,7 @@
+{% extends "single.html" %}
+
+{% block main %}
+    <h1>Payment status</h1>
+    <p>Payment {{ payment.amount }} {{ payment.currency }}</p>
+    <p>id: {{ payment.code }} - {{ payment.status }}</p>
+{% endblock %}

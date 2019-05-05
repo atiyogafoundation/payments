@@ -1,0 +1,12 @@
+{% load i18n %} 
+
+<p>
+	{% blocktrans %}
+	Your generosity may help us continue our mission. Please consider making donation.
+	{% endblocktrans %}
+
+	<a class="button-cta" href="{% url 'event_donation' event.id %}">
+		{% trans "Donate NOW" %}
+		<span class="icon-circle"><i class="icon icon--heart-full"></i></span>
+	</a>
+</p>

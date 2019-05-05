@@ -1,0 +1,14 @@
+{% extends "single.html" %}
+{% load i18n %} 
+{% load crispy_forms_tags %}
+
+
+{% block header %}
+    <h2>{% trans "Bank Transfer Payment" %}</h2>
+{% endblock header %}
+
+
+{% block main %}
+    {% include 'payments/_bank_transfer.html' %}
+    <p><a class='button' href="javascript:history.go(-3)">{% trans 'Go Back' %}</a></p>
+{% endblock main %} 

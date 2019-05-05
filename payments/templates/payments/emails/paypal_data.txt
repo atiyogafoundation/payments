@@ -1,0 +1,9 @@
+{% load i18n %} 
+{% trans 'Dear' %} {{ payment.billing_first_name }} {{ payment.billing_last_name }}
+
+{% trans 'To conclude the payment please go to ' %} https://www.paypal.com
+{% trans 'and  proceed with payment of ' %} {{ payment.show_amount }}
+{% trans 'to' %} {{ settings.paypal_email }}
+
+{% trans 'Please remember to indicate in the transfer comments the payment id:' %} {{ payment.code }}
+{% trans 'Thank You!' %}

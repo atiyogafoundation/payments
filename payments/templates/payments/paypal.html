@@ -1,0 +1,20 @@
+{% extends "single.html" %}
+{% load i18n %} 
+{% load crispy_forms_tags %}
+
+
+{% block header %}
+    <h2>{% trans "Awaiting Paypal Payment" %}</h2>
+{% endblock header %}
+
+
+{% block main %}
+    <p>{% trans 'To conclude the payment please go to ' %} <a href='https://www.paypal.com'>paypal.com</a></p>
+    <p>{% trans 'and  proceed with payment of ' %} {{ payment.show_amount }}
+    {% trans 'to' %} {{ settings.paypal_email }}</p>
+
+    <p>{% trans 'Please remember to indicate in the transfer comments the payment id:' %} {{ payment.code }}</p>
+    <p>{% trans 'Thank You!' %}</p>
+
+    <p><a class='button' href="javascript:history.go(-3)">{% trans 'Go Back' %}</a></p>
+{% endblock main %} 

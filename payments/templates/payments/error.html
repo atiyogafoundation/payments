@@ -1,0 +1,18 @@
+ 
+{% extends "base.html" %}
+{% load i18n %} 
+{% load crispy_forms_tags %}
+
+
+{% block content %}
+<article class="post__body post__body--offsets">
+    <section class="section" data-type="text">
+        <div class="section__wrapper">
+            <h1>{% trans 'Payment Error' %}</h1>
+            <p>{{ error }}</p>
+        </div>
+    </section>
+</article>
+
+{% endblock content %} 
+

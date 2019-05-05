@@ -1,0 +1,21 @@
+{% load i18n %} 
+<p>{% trans 'cause' %}: <strong>{{ payment.cause.name }}</strong></p>
+<p>{% trans 'beneficiary' %}: <strong>{{ payment.to }}</strong></p>
+<p>{% trans 'amount' %}: <strong>{{ payment.show_amount }}</strong></p>
+<p>{% trans 'account' %}: </h3>
+<ul>
+    <li>Bank: <strong>{{ settings.bank }}</strong></li>
+    <li>Bank address: <strong>{{ settings.address }}</strong></li>
+    <li>Account Nr: <strong>{{ settings.account_nr }}</strong></li>
+</ul>
+
+<p>
+    {% if settings.cause %} 
+        {{ settings.cause }}
+    {% else %}
+        {% trans "Please indicate in the transfer comments the payment id:" %}
+    {% endif %} 
+    <strong>{{ payment.code }}</strong>
+</p>
+<p>{% trans 'Thank You!' %}</p>
+<p><a class='button' href="javascript:history.go(-3)">{% trans 'Go Back' %}</a></p>

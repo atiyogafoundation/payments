@@ -1,0 +1,250 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-31 17:18+0200\n"
+"PO-Revision-Date: 2019-01-21 13:51+0000\n"
+"Last-Translator: b'Anton Rutkovskyi <a.rutkovsky@gmail.com>'\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Translated-Using: django-rosetta 0.8.1\n"
+
+#: payments/models.py:87 payments/providers/_abstract_provider.py:32
+#, python-format
+msgid "There errors in settings: %s"
+msgstr "Имеются ошибки в настройках: %s"
+
+#: payments/models.py:104 payments/models.py:115
+msgid "Waiting for confirmation"
+msgstr "В ожидание подтверждения"
+
+#: payments/models.py:105
+msgid "Pre-authorized"
+msgstr "Заранее уполномоченный"
+
+#: payments/models.py:106 payments/models.py:116 payments/models.py:119
+msgid "Confirmed"
+msgstr "подтвердил/а"
+
+#: payments/models.py:107
+msgid "Rejected"
+msgstr "Отклонен"
+
+#: payments/models.py:108 payments/models.py:120
+msgid "Refunded"
+msgstr "Возвращен"
+
+#: payments/models.py:109
+msgid "Error"
+msgstr "ошибка"
+
+#: payments/models.py:110 payments/models.py:117
+msgid "Cancelled"
+msgstr "отменен"
+
+#: payments/models.py:111
+msgid "Input"
+msgstr "вход"
+
+#: payments/models.py:133
+msgid "from"
+msgstr "из"
+
+#: payments/models.py:136
+msgid "to"
+msgstr "в"
+
+#: payments/models.py:159
+msgid "first name"
+msgstr "имя"
+
+#: payments/models.py:161
+msgid "last name"
+msgstr "Фамилия"
+
+#: payments/models.py:168
+msgid "country"
+msgstr "страна"
+
+#: payments/models.py:172
+msgid "email"
+msgstr "эл. адрес"
+
+#: payments/models.py:175
+msgid "message"
+msgstr "сообщение"
+
+#: payments/models.py:235
+#, python-format
+msgid "%s does not accept '%s' status"
+msgstr "%s не принимает «%s» статус "
+
+#: payments/providers/_abstract_provider.py:19
+#, python-format
+msgid "this payment option requires \"%s\" setting"
+msgstr "этот вариант оплаты требует «%s» "
+
+#: payments/providers/basic.py:8
+#, python-format
+msgid "Bank Transfer Payment to %s"
+msgstr "Банковский перевод оплаты на %s"
+
+#: payments/providers/braintree.py:24
+msgid "We couldn't verify your payment. Please try again."
+msgstr "Мы не смогли подтвердить ваш платеж. Пожалуйста, попробуйте еще раз."
+
+#: payments/templates/payments/_bank_transfer.html:2
+#: payments/templates/payments/donation.html:17
+#: payments/templates/payments/payment.html:12
+msgid "cause"
+msgstr "причина"
+
+#: payments/templates/payments/_bank_transfer.html:3
+#: payments/templates/payments/donation.html:18
+#: payments/templates/payments/payment.html:13
+msgid "beneficiary"
+msgstr "получаетль"
+
+#: payments/templates/payments/_bank_transfer.html:4
+msgid "amount"
+msgstr "количество"
+
+#: payments/templates/payments/_bank_transfer.html:5
+msgid "account"
+msgstr "счет"
+
+#: payments/templates/payments/_bank_transfer.html:21
+msgid "Please indicate in the transfer comments the payment id:"
+msgstr ""
+"Пожалуйста, укажите идентификатор платежа  в комментариях при переводе :"
+
+#: payments/templates/payments/_bank_transfer.html:25
+#: payments/templates/payments/emails/transfer_data.txt:19
+msgid "Thank You!"
+msgstr "Спасибо!"
+
+#: payments/templates/payments/_donate.html:4
+msgid ""
+"\n"
+"\tYour generosity may help us continue our mission. Please consider making donation.\n"
+"\t"
+msgstr ""
+"\n"
+"Ваша щедрость может помочь нам продолжить нашу миссию. Мы приветствуем пожертвования."
+
+#: payments/templates/payments/_donate.html:9
+msgid "Donate NOW"
+msgstr "Пожертвовать СЕЙЧАС"
+
+#: payments/templates/payments/bank_trasfer.html:7
+msgid "Bank Transfer"
+msgstr "Банковский Перевод"
+
+#: payments/templates/payments/bank_trasfer.html:12
+msgid "Payment via Bank Transfer"
+msgstr "Оплата через Банковский Перевод"
+
+#: payments/templates/payments/cash.html:7
+msgid "Payment via Cash"
+msgstr "Оплата Наличными"
+
+#: payments/templates/payments/cash.html:8
+msgid "Thank You. "
+msgstr "Спасибо."
+
+#: payments/templates/payments/donation.html:8
+#: payments/templates/payments/donation.html:16
+msgid "Donation"
+msgstr "Пожертвование"
+
+#: payments/templates/payments/donation.html:23
+msgid "Donate"
+msgstr "пожертвовать"
+
+#: payments/templates/payments/emails/transfer_data.txt:2
+msgid "Dear"
+msgstr "Уважаемый/ая"
+
+#: payments/templates/payments/emails/transfer_data.txt:4
+msgid ""
+"To conclude the payment please proceed to execute bank transfer with "
+"following"
+msgstr ""
+"Чтобы завершить оплату, пожалуйста, продолжите и осуществите банковский "
+"перевод с последующими данными"
+
+#: payments/templates/payments/emails/transfer_data.txt:6
+msgid "cause:"
+msgstr "причина:"
+
+#: payments/templates/payments/emails/transfer_data.txt:7
+msgid "beneficiary:"
+msgstr "бенефициар/получатель:"
+
+#: payments/templates/payments/emails/transfer_data.txt:8
+msgid "amount:"
+msgstr "количество:"
+
+#: payments/templates/payments/emails/transfer_data.txt:10
+msgid "account:"
+msgstr "счет:"
+
+#: payments/templates/payments/emails/transfer_data.txt:11
+msgid "Bank:"
+msgstr "Банк:"
+
+#: payments/templates/payments/emails/transfer_data.txt:12
+msgid "Bank address:"
+msgstr "Адрес Банка:"
+
+#: payments/templates/payments/emails/transfer_data.txt:13
+msgid "Account name:"
+msgstr "Имя пользователя:"
+
+#: payments/templates/payments/emails/transfer_data.txt:14
+msgid "IBAN:"
+msgstr "IBAN:"
+
+#: payments/templates/payments/emails/transfer_data.txt:15
+msgid "BIC:"
+msgstr "BIC:"
+
+#: payments/templates/payments/emails/transfer_data.txt:16
+msgid "SWIFT:"
+msgstr "SWIFT:"
+
+#: payments/templates/payments/emails/transfer_data.txt:18
+msgid "Please remember to indicate in the transfer comments the payment id:"
+msgstr ""
+"Пожалуйста, не забудьте указать идентификатор платежа в комментариях о "
+"переводе:"
+
+#: payments/templates/payments/error.html:11
+msgid "Payment Error"
+msgstr "Ошибка оплаты"
+
+#: payments/templates/payments/payment.html:11
+msgid "Payment"
+msgstr "Оплата"
+
+#: payments/templates/payments/payment.html:14
+msgid "to pay"
+msgstr "Оплатить"
+
+#: payments/templates/payments/payment.html:19
+msgid "Pay"
+msgstr "платить"
+
+#: payments/views.py:34
+msgid "Order data not found"
+msgstr "Данные заказа не найдены"
