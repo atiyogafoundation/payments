@@ -1,10 +1,10 @@
 from django.contrib import admin
 from django.utils import timezone
 from django.utils.html import format_html
+from django.urls import reverse
 
 from .models import Payment, Option
 from utils.admin._created import _CreatedAdmin
-from utils.admin.utils import get_admin_url_4_model
 from organizations.admin import InstitutionAdminMixin
 
 
@@ -90,8 +90,11 @@ class PaymentAdmin(admin.ModelAdmin, InstitutionAdminMixin):
     )
 
     def show_cause(self, obj):
-        if hasattr(obj, 'cause'):
-            return  format_html('<a href="{}">{}</a>', get_admin_url_4_model(obj.cause), obj.cause)
+        if hasattr(obj, 'cause') and obj.cause != None:
+            # import ipdb; ipdb.set_trace()
+            url = reverse("admin:%s_%s_change" % (
+                obj.cause._meta.app_label, obj.cause._meta.model_name), args=(obj.cause.id,))
+            return  format_html('<a href="{}">{}</a>', url, obj.cause)
         else: 
             return ''
     show_cause.short_description = 'Cause'
