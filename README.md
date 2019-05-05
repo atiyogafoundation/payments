@@ -9,6 +9,12 @@ Features:
 * Paypal payment gateway with sandbox for testing
 * Easly extendable to provide more payment gateways
 
+Supported payment methods:
+* cash
+* SWIFT bank transfer
+* non SWIFT bank transfer for countries like Venezuela
+* Paypal email
+* Credit card via Paypal using Paypal REST SDK
 
 Installing
 ----------
