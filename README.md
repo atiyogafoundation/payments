@@ -34,7 +34,7 @@ Assuming that you got virtualenv (python virtual envirement) created and activat
 
 Install via pip:
 
-    pip install -e git+https://github.com/atiyogafoundation/payments/.git#egg=payments
+    pip install -e git+https://github.com/atiyogafoundation/payments.git#egg=payments
 
 Add to "INSTALLED_APPS" in settings.py file:
     
