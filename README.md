@@ -57,3 +57,4 @@ At settings.py file must be set:
 
 Licence
 -------
+[GPL](LICENSE)
