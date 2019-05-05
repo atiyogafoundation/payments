@@ -4,7 +4,7 @@ payments
 Payment module providing convinient abstraction over different payment methods and gateways
 Features traditional payment methods: cash, bank transfer and Paypal payment gateway. 
 Easly extendable to provide more payment gateways
-Tested with django 2.1
+Tested with Django 1.11.15
 
 Supported payment methods:
 * cash
