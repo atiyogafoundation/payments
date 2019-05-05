@@ -1,14 +1,17 @@
 payments
 =================================
 
-Payment module providing convinient abstraction over diferent payment methods and gateways
+Payment module providing convinient abstraction over different payment methods and gateways
+Features traditional payment methods: cash, bank transfer and Paypal payment gateway. 
+Easly extendable to provide more payment gateways
 Tested with django 2.1
 
-Features:
-* traditional payment methods: cash, bank transfer
-* Paypal payment gateway with sandbox for testing
-* Easly extendable to provide more payment gateways
-
+Supported payment methods:
+* cash
+* SWIFT bank transfer
+* non SWIFT bank transfer for countries like Venezuela
+* Paypal email
+* Credit card via Paypal using Paypal REST SDK (with snadbox for testing)
 
 Installing
 ----------
