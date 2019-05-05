@@ -32,7 +32,8 @@ Create tables etc.:
 
 Config
 ------
-At settings.py file must be set
+At settings.py file must be set:
+    
     'PAYEMNT_HOST = "https://domain.com"'
 
 
