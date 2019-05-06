@@ -79,7 +79,7 @@ from ._abstract_provider import AbstrtactProvider
 class YourGateway(AbstrtactProvider):
     required_params = {
         'param_1' : str, 
-        'param_1' : int, 
+        'param_2' : int, 
     }
     def execute(self, request, data):
         ...
