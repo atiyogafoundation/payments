@@ -68,12 +68,17 @@ PAYMENT_PROVIDERS = {
 Extending
 ---------
 
-Other payment methods / paymenet gateways can be easly added by subclassing `AbstrtactProvider` and overiding methods `execute`, `on_return`, `on_cancel`
+Other payment methods / paymenet gateways can be easly added by subclassing `AbstrtactProvider` and overiding methods `execute`, `on_return`, `on_cancel` and setting `required_params`.
+
 
 ```python
 from ._abstract_provider import AbstrtactProvider
 
 class YourGateway(AbstrtactProvider):
+    required_params = {
+        'client_id' : str, # Edit this to your API user name
+        'secret' : str, # Edit this to your API password
+    }
     def execute(self, request, data):
         ...
      
@@ -82,7 +87,8 @@ class YourGateway(AbstrtactProvider):
      
     def on_cancel(self, request):
         ...
-        
+```
+
 Path to the file with custom payment method should be added to `PAYMENT_PROVIDERS` at `settings.py` (look config)
 
 Licence
