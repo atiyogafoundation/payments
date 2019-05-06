@@ -54,6 +54,16 @@ At settings.py file must be set:
     
     PAYEMNT_HOST = "https://domain.com"
 
+```python
+PAYMENT_PROVIDERS = {
+    'cash': ('payments.providers.basic.Cash', {}),
+    'bank_transfer': ('payments.providers.basic.BankTransfer', {}),
+    'SWIFT_transfer': ('payments.providers.basic.SWIFTTransfer', {}),
+    'creadit_card_via_paypal': ('payments.providers.paypal.PaypalCard', {}),
+    'paypal': ('payments.providers.paypal.Paypal', {}),
+    'paypal_sandbox': ('payments.providers.paypal.PaypalSandbox', {}),
+}
+```
 
 Licence
 -------
