@@ -16,6 +16,7 @@ Supported payment methods:
 * Paypal email
 * Credit card via Paypal using Paypal REST SDK (with snadbox for testing)
 
+Paypal credantials con be obtained [following those steps](https://earlysandwich.com/programming/others/get-client-id-secret-key-paypal-account-297/)
 
 Dependencies
 ------------
