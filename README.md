@@ -23,9 +23,9 @@ Dependencies
 
 external:
 * yamlfield
-* oauthlib (for Paypal)
-* requests_oauthlib (for Paypal)
-* paypalrestsdk
+* oauthlib (Paypal)
+* requests_oauthlib (Paypal)
+* paypalrestsdk (Paypal)
 
 interanal:
 * Institution
