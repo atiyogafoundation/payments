@@ -65,6 +65,26 @@ PAYMENT_PROVIDERS = {
 }
 ```
 
+Extending
+---------
+
+Other payment methods / paymenet gateways can be easly added by subclassing `AbstrtactProvider` and overiding methods `execute`, `on_return`, `on_cancel`
+
+```python
+from ._abstract_provider import AbstrtactProvider
+
+class YourGateway(AbstrtactProvider):
+    def execute(self, request, data):
+        ...
+     
+    def on_return(self, request):
+        ...
+     
+    def on_cancel(self, request):
+        ...
+        
+Path to the file with custom payment method should be added to `PAYMENT_PROVIDERS` at `settings.py` (look config)
+
 Licence
 -------
 [GPL](LICENSE)
