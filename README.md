@@ -77,7 +77,7 @@ Other payment methods / paymenet gateways can be easly added by subclassing `Abs
 
 
 ```python
-from ._abstract_provider import AbstrtactProvider
+from payments.providers._abstract_provider import AbstrtactProvider
 
 class YourGateway(AbstrtactProvider):
     required_params = {
