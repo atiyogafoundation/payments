@@ -69,6 +69,7 @@ Extending
 ---------
 
 Other payment methods / paymenet gateways can be easly added by subclassing `AbstrtactProvider` and overiding methods `execute`, `on_return`, `on_cancel` and setting `required_params`.
+`required_params` will be validated using provided data type
 
 
 ```python
@@ -76,8 +77,8 @@ from ._abstract_provider import AbstrtactProvider
 
 class YourGateway(AbstrtactProvider):
     required_params = {
-        'client_id' : str, # Edit this to your API user name
-        'secret' : str, # Edit this to your API password
+        'param_1' : str, 
+        'param_1' : int, 
     }
     def execute(self, request, data):
         ...
