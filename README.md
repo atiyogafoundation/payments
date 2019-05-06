@@ -69,7 +69,8 @@ Extending
 ---------
 
 Other payment methods / paymenet gateways can be easly added by subclassing `AbstrtactProvider` and overiding methods `execute`, `on_return`, `on_cancel` and setting `required_params`.
-`required_params` will be validated using provided data type
+
+`required_params` will be validated using provided data type.
 
 
 ```python
