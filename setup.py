@@ -21,5 +21,5 @@ setup(
                  'Programming Language :: Python',
                  'Topic :: Utilities'],
     license='BSD',
-    test_suite = "contenta.tests",
+    test_suite = "payments.tests",
 )
