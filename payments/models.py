@@ -75,11 +75,11 @@ class Option(models.Model):
     institution = models.ForeignKey(Institution)
     provider = models.CharField(
         max_length=255, choices=get_providers_choices())
-    currency = models.CharField(max_length=3, choices=CURRENCIES)
     # description = models.TextField()
     settings = YAMLField(
         blank=True, null=True,
         help_text="check settings for each provider")
+    currency = models.CharField(max_length=3, choices=CURRENCIES)
     destination = models.PositiveIntegerField(choices=DESTINATIONS)
 
     def get_provider(self, payment):
