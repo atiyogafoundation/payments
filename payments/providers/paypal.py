@@ -24,7 +24,7 @@ class PaypalCard(AbstrtactProvider):
     }
     
     def __init__(self, settings, payment):
-        super(Paypal, self).__init__(settings, payment)
+        super(PaypalCard, self).__init__(settings, payment)
         api = paypalrestsdk.configure({
             'mode': self.MODE, #sandbox or live
             'client_id': settings['client_id'],
